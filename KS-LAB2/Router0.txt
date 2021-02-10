@@ -1,0 +1,14 @@
+en
+conf t 
+no ip domain-lookup
+hostname VDY-1
+int fa0/0
+ip addr 172.30.9.65  255.255.255.192
+no shutdown
+int fa1/0
+ip addr 172.30.13.65 255.255.255.192
+no shutdown
+exit 
+ip route 172.30.13.128 255.255.255.192 172.30.13.66
+exit 
+
